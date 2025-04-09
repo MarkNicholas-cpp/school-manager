@@ -1,0 +1,215 @@
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 350px;
+  grid-template-rows: repeat(6, auto);
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.div2 {
+  grid-area: 2 / 1 / 3 / 4;
+}
+.div3 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.div4 {
+  grid-area: 3 / 2 / 4 / 4;
+}
+.div5 {
+  grid-area: 1 / 4 / 4 / 5;
+}
+.div6 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+.div7 {
+  grid-area: 4 / 2 / 5 / 5;
+}
+.div8 {
+  grid-area: 5 / 1 / 7 / 4;
+}
+.div9 {
+  grid-area: 5 / 4 / 6 / 5;
+}
+.div10 {
+  grid-area: 6 / 4 / 7 / 5;
+}
+
+/* styling the calender */
+
+.react-calendar {
+  max-width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+.react-calendar .react-calendar__navigation {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+}
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  @apply hidden;
+}
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  width: calc(var(--spacing) * 5);
+  height: calc(var(--spacing) * 5);
+  cursor: pointer;
+  display: flex;
+  border-radius: calc(var(--spacing) * 2);
+  @apply items-center;
+  @apply justify-center;
+  border: 1px solid var(--color-dark-grey);
+  padding-bottom: var(--spacing);
+  color: var(--color-dark-grey);
+  font-size: calc(var(--spacing) * 4);
+}
+
+.react-calendar__viewContainer {
+  padding: calc(var(--spacing) * 5);
+}
+
+.react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+.react-calendar__month-view__weekdays
+  .react-calendar__month-view__weekdays__weekday {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 !important;
+}
+.react-calendar__month-view__weekdays
+  .react-calendar__month-view__weekdays__weekday
+  abbr {
+  text-decoration: none;
+  color: var(--color-light-grey);
+  padding: 6px;
+  margin: 6px;
+}
+
+/* 🗓️ Days Grid (Dates) */
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr);
+  gap: calc(var(--spacing) * 1); /* or use gap-1 in Tailwind */
+}
+
+/* 🎯 Each Day Tile */
+.react-calendar__month-view__days > * {
+  aspect-ratio: 1 / 1;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  flex: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* 🧠 Override Default Inline Flex Style */
+.react-calendar__tile {
+  flex: none !important;
+  width: auto !important;
+}
+
+
+.react-calendar__tile--now {
+  background-color: var(--color-light-cyan) !important;
+  border-radius: 6px;
+}
+
+
+
+/* Make the container grid */
+.react-calendar__year-view__months {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 8px;
+}
+
+/* Style each month */
+.react-calendar__year-view__months__month {
+  @apply flex items-center justify-center;
+  width: 80px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.react-calendar__year-view__months__month:hover {
+  background-color: var(--color-light-cyan);
+  font-weight: 600;
+}
+
+
+/* Make the year grid layout */
+.react-calendar__decade-view__years {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 8px;
+}
+
+/* Individual year cells */
+.react-calendar__decade-view__years__year {
+  @apply flex items-center justify-center;
+  width: 80px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* On hover */
+.react-calendar__decade-view__years__year:hover {
+  background-color: var(--color-light-cyan);
+  font-weight: 600;
+}
+
+
+/* === Pointer cursor and hover state for all calendar tiles === */
+.react-calendar__tile {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: var(--radius-xl);
+}
+
+.react-calendar__tile:hover {
+  background-color: var(--color-light-cyan);
+}
+
+/* === Highlight today's date === */
+.react-calendar__tile--now {
+  background-color: var(--color-light-cyan);
+  border-radius: var(--radius-xl);
+}
+
+/* === Navigation buttons === */
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.react-calendar__navigation__prev-button:hover,
+.react-calendar__navigation__next-button:hover {
+  background-color: var(--color-light-cyan);
+  color: var(--color-primary);
+  border-radius: var(--radius-xl);
+}
+
+/* === Optional: Disabled tiles cursor === */
+.react-calendar__tile:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}

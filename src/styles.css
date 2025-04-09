@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800&display=swap");
+@import "tailwindcss";
+
+/* 1️⃣ Define Variables */
+@layer base {
+  :root {
+    /* Colors */
+    --color-primary: #2563eb; /* Example Blue */
+    --color-secondary: #a855f7; /* Example Purple */
+
+    --color-grey: #8a8d8e;
+    --color-light-grey: #d1d5db;
+    --color-dark-grey: #4b5563;
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    --color-success: #00997e;
+    --color-danger: #ef4444;
+    --color-info: #4abde8;
+    --color-warning: #FFAE41;
+
+    --color-light-pink: #ec4899;
+    --color-light-purple: #cfceff;
+    --color-light-cyan: #c3ebfa;
+    --color-yellow: #FAE27C;
+
+    /* Custom Font */
+    --font-serif: "Plus Jakarta Sans", sans-serif;
+  }
+
+  body {
+    font-family: var(--font-serif);
+    background-color: var(--color-white);
+  }
+}
+
+/* 2️⃣ Define Utility Classes */
+@layer utilities {
+  /* Colors */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .text-grey {
+    color: var(--color-grey);
+  }
+  .text-success {
+    color: var(--color-success);
+  }
+  .text-danger {
+    color: var(--color-danger);
+  }
+  .text-info {
+    color: var(--color-info);
+  }
+  .text-warning {
+    color: var(--color-warning);
+  }
+
+  /* Custom Typography */
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  /* Custom Headings */
+  .heading-lg {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .heading-md {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .paragraph-lg {
+    font-size: 16px;
+    line-height: auto;
+  }
+  .paragraph-md {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .paragraph-sm {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  /* Caption Styles */
+  .text-caption {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .text-caption-small {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+/* 3️⃣ Layout Styles */
+.main-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 84px auto;
+  grid-template-areas:
+    "m h"
+    "m c";
+}
+
+.menu {
+  grid-area: m;
+}
+
+.content {
+  grid-area: c;
+}
+
+.header {
+  grid-area: h;
+}
