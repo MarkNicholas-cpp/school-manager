@@ -76,7 +76,7 @@ const router = createBrowserRouter([
                 Component: () => RoleBasedRoute({ allowedRoles: [Role.ADMIN] }),
                 children: [
                     {
-                        path: "", Component: AdminLayout, children: [
+                        path: "", Component: TeacherLayout, children: [
                             { path: "", Component: AdminDashboard }
                         ]
                     }

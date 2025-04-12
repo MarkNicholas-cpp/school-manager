@@ -9,7 +9,7 @@ payload = {
     "id": 1,
     "name": "Emily",
     "email": "emily@example.com",
-    "role": "teacher",
+    "role": "admin",
     "exp": datetime.datetime.utcnow() + datetime.timedelta(days=2)  # 2-day expiration
 }
 

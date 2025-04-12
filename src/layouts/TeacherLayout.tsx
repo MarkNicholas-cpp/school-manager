@@ -9,7 +9,7 @@ import Profile from "../utils/Profile";
 
 function TeacherLayout() {
     const { user, logout } = useAuthStore();
-    return <div className="grid main-layout bg-[#f7f8fa] h-screen overflow-hidden">
+    return <div className="grid main-layout bg-[var(--color-broken-white)] h-screen overflow-hidden">
         <div className="header px-6 flex items-center">
             <div className="flex justify-between w-full">
                 <div className="relative">
@@ -21,7 +21,7 @@ function TeacherLayout() {
                         name="search"
                         id="search"
                         placeholder="Search"
-                        className="border border-[var(--color-light-grey)] py-2.5 pl-10 px-4 rounded-4xl h-[40px]"
+                        className="border border-[var(--color-dark-grey)] py-2.5 pl-10 px-4 rounded-4xl h-[40px]"
                     />
                 </div>
                 <div className="profile flex gap-1">

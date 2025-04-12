@@ -23,6 +23,7 @@
     --color-light-purple: #cfceff;
     --color-light-cyan: #c3ebfa;
     --color-yellow: #FAE27C;
+    --color-broken-white: #F7F8FA;
 
     /* Custom Font */
     --font-serif: "Plus Jakarta Sans", sans-serif;
@@ -124,4 +125,9 @@
 
 .header {
   grid-area: h;
+}
+
+
+.scrollbar-hide{
+  @apply [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden;
 }

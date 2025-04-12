@@ -89,7 +89,7 @@ const StudentAttandance = () => {
         { label: "Grade 3", value: "grade-3" },
     ];
 
-    return <div className="flex flex-col justify-between p-4 gap-4">
+    return <div className="flex flex-col justify-between gap-4">
         <p className="heading-md font-semibold">Student Attendance</p>
         <div className="aspect-square w-[80%] self-center relative">
             <div className='absolute inset-0 flex items-center justify-center heading-lg font-semibold'>80%</div>

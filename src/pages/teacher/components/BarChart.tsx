@@ -52,15 +52,7 @@ const BarChart: FC = () => {
             },
             legend: {
                 display: false,
-                position: "bottom",
-                labels: {
-                    usePointStyle: true,
-                    color: "#333",
-                    font: {
-                        size: 14,
-                        family: "Plus Jakarta Sans, sans-serif"
-                    }
-                },
+                
             },
             tooltip: {
                 callbacks: {
